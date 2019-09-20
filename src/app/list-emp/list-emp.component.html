@@ -1,0 +1,30 @@
+<div class="col-md-12">  
+    <h2> List Employee:</h2>  
+    <div class="table-responsive table-container">  
+      <table border="2" class="table">  
+        <thead>  
+          <tr>  
+            <th>EmpId</th>  
+            <th>Name</th>  
+            <th>Email</th> 
+            <th>Update</th> 
+            
+          </tr>  
+        </thead>  
+        <tbody>  
+          <tr *ngFor="let emp of employees">  
+            <td class="hidden">{{emp.id}}</td> 
+            <!-- <td>{{emp.title}}</td>  -->
+            <td>{{emp.name}}</td>  
+            <td>{{emp.email}}</td>  
+            
+            <td>  
+              
+              <button (click)="editEmp(emp)" style="margin-left: 20px;" class="btn btn-info"> Edit</button>  
+              <button (click)="deleteEmp(emp)" style="margin-left: 20px;" class="btn btn-info"> Delete</button>
+            </td>  
+          </tr>  
+        </tbody>  
+      </table>  
+    </div>  
+  </div>  
